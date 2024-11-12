@@ -1,0 +1,33 @@
+pipeline:
+  name: Build CI-Tutorial
+  identifier: Build_harness_community_CI_Tutorial_1731426287826
+  projectIdentifier: onecicd44184c93bc
+  orgIdentifier: WorkshopOrg
+  stages:
+    - stage:
+        name: Build
+        identifier: Build
+        type: CI
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Echo Welcome Message
+                  identifier: Echo_Welcome_Message
+                  spec:
+                    shell: Sh
+                    command: echo "Welcome to Harness CI"
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: org.workshopgithub
+        repoName: harness-community/CI-Tutorial
+        build: <+input>
