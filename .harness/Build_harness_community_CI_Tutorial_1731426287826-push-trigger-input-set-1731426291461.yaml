@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_harness_community_CI_Tutorial_1731426287826-push-trigger-input-set
+  identifier: Build_harness_community_CI_Tutorial_1731426287826pushtriggerinputset
+  orgIdentifier: WorkshopOrg
+  projectIdentifier: onecicd44184c93bc
+  pipeline:
+    identifier: Build_harness_community_CI_Tutorial_1731426287826
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
